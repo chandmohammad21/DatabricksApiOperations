@@ -1,0 +1,26 @@
+{
+    "num_workers": 3,
+    "cluster_name": "clusterfromapi",
+    "spark_version": "8.2.x-scala2.12",
+    "spark_conf": {
+        "spark.driver.maxResultSize": "0"
+    },
+    "azure_attributes": {
+        "first_on_demand": 1,
+        "availability": "SPOT_WITH_FALLBACK_AZURE",
+        "spot_bid_max_price": -1
+    },
+    "node_type_id": "Standard_DS3_v2",
+    "ssh_public_keys": [],
+    "custom_tags": {},
+    "spark_env_vars": {
+        "AZURE_INSTRUMENTATION_KEY": "appinsight_key",
+        "RELEASE_ENVIRONMENT": "test",
+        "TENANT_ID": "your_tenant_id",
+        "DATABRICKS_SECRET_SCOPE": "test_secret_scope",
+        "AZURE_SUBSCRIPTION_NAME": "your_subsc_name"
+    },
+    "autotermination_minutes": 30,
+    "cluster_source": "UI",
+    "init_scripts": []
+}
